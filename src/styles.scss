@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #FF9933;
+    --secondary-color: #3cd2a5;
+    --primary-color2: #1628c3;
+    --secondary-color2: #00e79a;
+    --secondary-bg-color: #f7f9fc;
+    --font-size: 18px;
+    --mobilescreen-font-size: 15px;
+  
+    --color-text: #616161;
+    --color-text-btn: #ffffff;
+    --card1-gradient-color1: #f12711;
+    --card1-gradient-color2: #f5af19;
+    --card2-gradient-color1: #7F00FF;
+    --card2-gradient-color2: #E100FF;
+    --card3-gradient-color1: #3f2b96;
+    --card3-gradient-color2: #a8c0ff;
+    --card4-gradient-color1: #11998e;
+    --card4-gradient-color2: #38ef7d;
+    --bs-body-bg-gradient: linear-gradient(180deg, rgba(50, 70, 80, .9) 0%, rgb(13, 16, 27) 100%);
+    
+        --bs-body-bg-gradient: linear-gradient(180deg, rgba(50, 70, 80, .9) 0%, rgb(13, 16, 27) 100%);
+        --bs-body-bg-image: url(./assets/imagess/square.png);
+        --bs-body-bg-image-size: 4.6875rem;
+        --bs-body-bg-cover: url(../src/assets/imagess/background.jpg);
+        --bs-body-font-weight: 300;
+        --bs-body-letter-spacing: .046875rem;
+        --bs-component-bg: #28292b;
+        --bs-component-bg-rgb: 40, 41, 43;
+        --bs-component-color: rgba(255, 255, 255, .75);
+        --bs-component-color-rgb: 255, 255, 255;
+        --bs-app-header-bg: rgba(29, 40, 53, .95);
+        --bs-app-header-brand-img: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAggAAAIICAYAAAAL/BZjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM1MiwgMjAyMC8wMS8zMC0xNTo1MDozOCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjEuMSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMDgtMDNUMTQ6NDQ6NTArMDg6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTA4LTAzVDEwOjQ5OjQ2KzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTA4LTAzVDEwOjQ5OjQ2KzA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxMDc3NkY0Q0VCNEExMUVCQkM2Mzg3M0I4QUIxNjVCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxMDc3NkY0REVCNEExMUVCQkM2Mzg3M0I4QUIxNjVCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJl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);
+        --bs-app-header-link-color: #FFFFFF;
+        --bs-app-header-link-color-rgb: 255, 255, 255;
+        --bs-app-header-link-hover-color: rgba(255, 255, 255, .5);
+        --bs-app-header-scroll-box-shadow: ;
+        --bs-app-sidebar-menu-header-color: rgba(var(--bs-inverse-rgb), .3);
+        --bs-app-sidebar-menu-link-color: rgba(var(--bs-inverse-rgb), .5);
+        --bs-app-sidebar-menu-link-hover-color: #FFFFFF;
+        --bs-app-sidebar-menu-link-active-color: #FFFFFF;
+        --bs-app-sidebar-mobile-bg: rgba(44, 56, 70, .98);
+        --bs-app-top-nav-bg: rgba(29, 40, 53, .95);
+        --bs-app-top-nav-menu-link-color: rgba(var(--bs-inverse-rgb), .5);
+        --bs-app-top-nav-menu-link-hover-color: #FFFFFF;
+        --bs-app-top-nav-menu-link-active-color: #FFFFFF;
+        --bs-app-top-nav-menu-submenu-bg: rgba(29, 40, 53, .95);
+        --bs-app-theme-panel-bg: rgba(68, 85, 94, .95);
+        --bs-theme-bg-subtle: #071f18;
+    
+  }
+.brand_color{
+    color: #FF9933;
+}
+.band_orange{
+    color: var(--primary-color2);
+}
+.band_green{
+    color: var(--secondary-color2);
+}
+html:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-color: var(--bs-body-bg);
+    background-image: var(--bs-body-bg-gradient);
+    background-image: var(--bs-body-bg-cover);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: initial;
+    height: 100%;
+    transition: background .2s linear;
+    background-size: cover;
+}
+html:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -5;
+    background: var(--bs-body-bg-gradient);
+}
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: transparent;
+    background-image: var(--bs-body-bg-image);
+
+    background-size: var(--bs-body-bg-image-size);
+    background-repeat: repeat;
+    background-attachment: initial;
+    z-index: -5;
+}
+body {
+    // font-family: 'Chakra Petch', sans-serif;
+    font-family: "Montserrat", sans-serif;
+}

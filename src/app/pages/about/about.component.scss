@@ -1,0 +1,256 @@
+
+  
+  .about-section {
+    display: grid;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: #f9f9f912;
+    position: relative;
+    grid-template-columns: 450px 1fr;
+    color: white;
+  
+    .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: 95px;
+        position: relative;
+      
+        .hexagon {
+          width: 225px;
+          height: 225px;
+          clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      
+          h2 {
+            font-size: 50px;
+            margin: 0;
+          }
+      
+          p {
+            margin-top: 10px;
+            font-size: 20px;
+          }
+      
+          &.light {
+            background-color: #fff;
+            color: #333;
+      
+            h2 {
+              color: var(--primary-color2);
+            }
+          }
+      
+          &.orange {
+            background: linear-gradient(to bottom right, var(--primary-color2), var(--secondary-color2));
+            color: white;
+          }
+        }
+      
+        // staggered layout
+        .hexagon:nth-child(2) {
+        //   margin-left: 50px;
+            position: absolute;
+            top: 215px;
+    left: 130px;
+        }
+      
+        .hexagon:nth-child(3) {
+          margin-left: 0px;
+          position: relative;
+          top: 115px;
+        }
+      }
+
+
+      .about-boxarea {
+        height: 260px;
+        width: 260px;
+        text-align: center;
+        z-index: 1;
+        position: relative;
+        border-radius: 4px;
+    }
+      
+  
+    .about-content {
+      flex: 2;
+      padding-left: 40px;
+  
+      .section-tag {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+      }
+  
+      .title {
+        font-size: 32px;
+       
+        margin: 10px 0;
+      }
+  
+      .sub-title {
+        font-size: 26px;
+        font-weight: bold;
+  
+        span {
+          color: var(--primary-color2);
+          font-style: italic;
+          text-decoration: underline;
+        }
+      }
+  
+      .description {
+       
+        font-size: 14px;
+        max-width: 600px;
+        margin: 20px 0;
+      }
+  
+      .services {
+        display: flex;
+        gap: 40px;
+  
+        ul {
+          list-style: none;
+          padding: 0;
+  
+          li {
+            font-weight: 500;
+           
+            margin-bottom: 10px;
+          }
+        }
+      }
+  
+      .cta-button {
+        margin-top: 30px;
+        padding: 12px 24px;
+        background: linear-gradient(to right, var(--primary-color2), var(--secondary-color2));
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
+  // 📱 Responsive
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      padding: 20px;
+  
+      .about-content {
+        padding-left: 0;
+        margin-top: 30px;
+  
+        .title {
+          font-size: 26px;
+        }
+  
+        .sub-title {
+          font-size: 22px;
+        }
+  
+        .services {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  
+    .stats {
+      flex-direction: row !important;
+      justify-content: center;
+      flex-wrap: wrap;
+  
+      .hexagon {
+        width: 100px;
+        height: 115px;
+      }
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  [data-aos^="fade"].aos-animate {
+    opacity: 1 !important;
+    transform: translateZ(0);
+  }
+  
+  .marketer {
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+    border: 2px solid var(--secondary-color2);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background:  var(--secondary-color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  
+    img {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      opacity: 0; // start hidden
+      transition: all 0.8s ease-in-out;
+    }
+  
+    .elements1 {
+      top: 0;
+      left: 0;
+    }
+  
+    .elements2 {
+      top: 0;
+      right: 0;
+    }
+  
+    .elements3 {
+      bottom: 0;
+      left: 0;
+    }
+  
+    .elements4 {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  
+  

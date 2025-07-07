@@ -1,0 +1,26 @@
+<div class="sidebar-area">
+  <div class="content">
+    <div class="logo">
+      <div class="header_logo">
+       <img src="../../../assets/imagess/logo.png" alt="logo" >
+          <span>
+            <span class="band_orange">Shwet</span>  
+            <span class="band_green"> Kapila</span> 
+          </span>
+      </div>
+    </div>
+    <div id="list-example" class="list-group">
+      <ul>
+        <li
+        *ngFor="let item of menuItems"
+        [class.active]="activeItem === item.label"
+        (click)="setActive(item.label)"
+      >
+        <i [class]="item.icon"></i> {{ item.label }}
+      </li>
+      </ul>
+      
+    </div>
+  </div>
+    
+</div>

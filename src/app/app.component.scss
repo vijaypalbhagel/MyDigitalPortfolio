@@ -1,0 +1,50 @@
+.digital_portfolio {
+    display: flex;
+    min-height: 100vh;
+    // background-color: #f9f9f9;
+  
+    .side_bar {
+      width: 300px;
+      // background-color: #ffffff;
+      // border-right: 1px solid #eaeaea;
+      
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1000;
+  
+      @media (max-width: 992px) {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+      }
+    }
+  
+    .main_container {
+      margin-left: 300px;
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+  
+      @media (max-width: 992px) {
+        margin-left: 0;
+        padding: 1rem;
+      }
+  
+      app-home,
+      app-about,
+      app-services,
+      app-portfolio,
+      app-feedback,
+      app-skills,
+      app-our-blog,
+      app-contact {
+        scroll-margin-top: 80px; // for smooth scroll
+      }
+    }
+  }
+  
