@@ -1,0 +1,152 @@
+.kucoin-products {
+
+  h2 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 2rem;
+        font-size: 32px;
+  }
+
+  .product-grid {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .product-card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-content {
+      text-align: left;
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #666;
+      }
+    }
+
+    .card-footer {
+      display: grid;
+
+      justify-content: end;
+    //   align-items: center;
+      margin-top: 1rem;
+
+      .arrow {
+        font-size: 1.5rem;
+        color: #000;
+        text-align: center;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+      .product-grid  {
+            grid-template-columns: 1fr ; 
+            gap: 30px; 
+            .product-card {
+                max-width: 400px;
+            }
+        }
+         
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    .product-grid  {
+            grid-template-columns: 1fr ; 
+            gap: 30px; 
+            .product-card {
+                max-width: 400px;
+            }
+        }
+         
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+     .product-grid  {
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px; 
+        }
+
+        
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+   
+
+        .product-grid  {
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px; 
+        }
+
+        
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+       
+    }
+    @media (min-width: 1400px) and (max-width: 1410px) {
+       
+        
+    }
+}
+// ...existing code...
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.product-card {
+  opacity: 0;
+  &.slide-in-left {
+    animation: slideInLeft 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+  &.slide-in-right {
+    animation: slideInRight 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+}
+
+

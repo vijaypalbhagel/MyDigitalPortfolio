@@ -9,10 +9,12 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { OurBlogComponent } from './pages/our-blog/our-blog.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ResumeComponent } from './pages/resume/resume.component';
+import { ScrollSpyDirective } from './core/scroll-spy/scroll-spy.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent,HomeComponent,AboutComponent,ServicesComponent,SkillsComponent,PortfolioComponent,FeedbackComponent,OurBlogComponent,ContactComponent],
+  imports: [HeaderComponent,HomeComponent,AboutComponent,ServicesComponent,ResumeComponent,SkillsComponent,PortfolioComponent,FeedbackComponent,OurBlogComponent,ContactComponent,ScrollSpyDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,26 +1,39 @@
-<div class="sidebar-area">
+<div class="mobile-header">
+  <button class="menu-toggle" (click)="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
+
+<div class="sidebar-area" [class.open]="isSidebarOpen">
   <div class="content">
-    <div class="logo">
-      <div class="header_logo">
-       <img src="../../../assets/imagess/logo.png" alt="logo" >
-          <span>
-            <span class="band_orange">Shwet</span>  
-            <span class="band_green"> Kapila</span> 
-          </span>
+    <div class="profile-card">
+      <div class="profile-image">
+        <img src="../../../assets/imagess/mohit.png" alt="Jessica Biogi" />
       </div>
+      <div class="profile-info">
+
+        <h2><span>Mohit</span> Pal</h2>
+        <p class="role">Developer</p>
+
+      </div>
+      <div class="social_container">
+          <div class="social-icons">
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fas fa-link"></i></a>
+          </div>
+      </div>
+    
     </div>
     <div id="list-example" class="list-group">
       <ul>
-        <li
-        *ngFor="let item of menuItems"
-        [class.active]="activeItem === item.label"
-        (click)="setActive(item.label)"
-      >
-        <i [class]="item.icon"></i> {{ item.label }}
-      </li>
+        <li *ngFor="let item of menuItems" [class.active]="activeItem === item.label"  [attr.data-menu-label]="item.label" (click)="setActive(item.label, item.id)" class="list-group-item">
+          <i [class]="item.icon"></i> {{ item.label }}
+        </li>
       </ul>
-      
+
     </div>
   </div>
-    
+
 </div>

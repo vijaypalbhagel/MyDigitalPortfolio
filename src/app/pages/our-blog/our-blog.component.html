@@ -1,1 +1,30 @@
-<p>our-blog works!</p>
+<div class="page_container">
+  <div class="kucoin-products page_content" >
+    <h2>Our Blogs</h2>
+    <div class="product-grid">
+  
+      <div
+      *ngFor="let card of cards; let i = index"
+      class="product-card"
+      [ngClass]="{
+        'slide-in-left': isVisible && (i === 0 || i === 2),
+        'slide-in-right': isVisible && (i === 1 || i === 3)
+      }"
+    >
+        <div class="card-content">
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+        </div>
+        <div class="card-footer">
+          <span class="arrow">→</span>
+          <div style="background-image: url('{{ card.imageUrl }}'); width: 125px; height: 100px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+        </div>
+      </div>
+  
+  
+  
+  
+    </div>
+  </div>
+
+</div>
