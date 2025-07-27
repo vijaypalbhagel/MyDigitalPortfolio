@@ -1,72 +1,158 @@
-.about-section {
-    // display: grid;
-    // flex-wrap: wrap;
-    padding: 40px;
-    background: #f9f9f912;
-    position: relative;
-    grid-template-columns: 450px 1fr;
-    color: white;
-    h3{
-        text-align: center;
-        font-size: 30px;
+h2{
+  text-align: center;
+//   margin-bottom: 7rem;
+  font-size: 32px;
+  color: #fff;
     }
-  
-    .stats {
+.pricing-container {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 20px;
+//   padding: 40px;
+//   background: #f7f7f7;
+
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 20px;
+ 
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-header {
+    padding: 20px;
+    position: relative;
+    color: white;
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .icon{
+        font-size: 2rem;
+    }
+
+    .icon img {
+      margin-top: 10px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('../../../assets/svg/wave\ \(3\).svg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+   
+
+  .card-body {
+    margin-top: 5rem;
+    padding: 20px;
+    text-align: left;
+    p {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      li {
+        color: #333;
+        font-size: 0.9rem;
+        margin: 10px 0;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 95px;
-        max-width: 550px;  // or any width you prefer
-        margin: 0 auto; 
-        .hex {
-          width: 225px;
-          height: 225px;
-          clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 20px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      
-          h2 {
-            font-size: 22px;
-            margin: 0;
-          }
-      
-          p {
-            margin-top: 10px;
-            font-size: 18px;
-          }
-      
-          &.light {
-            background-color: #fff;
-            color: #333;
-      
-            h2 {
-              color: var(--primary-color2);
-            }
-          }
-      
-          &.orange {
-            background: linear-gradient(to bottom right, var(--primary-color2), var(--secondary-color2));
-            color: white;
-          }
+        grid-template-columns: 25px 1fr;
+        // align-items: center;
+        i {
+         
+          font-size: 1.2rem;
         }
-        .hex:nth-child(3) {
-          position: relative; 
-          top: 0;
-          left: -180px; // Reset top position
-        }
-        .hex:nth-child(4) {
-            position: relative; 
-            top: 0;
-            left: 180px; // Reset top position
-          }
-      
-        // staggered layout
-    
       }
     }
+    button {
+      background: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 15px;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+
+
+/* Gradient backgrounds */
+.basic .card-header {
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+}
+.standard .card-header {
+  background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+   &::after {
+      background: url('../../../assets/svg/wave\ \(3\)\ copy.svg') no-repeat center center;
+      background-size: cover;
+    }
+}
+.premium .card-header {
+  background: linear-gradient(to bottom, #ff6a00, #ee0979);
+  &::after {
+      background: url('../../../assets/svg/wave\ \(3\)\ copy\ 2.svg') no-repeat center center;
+      background-size: cover;
+    }
+}
+
+.basic .card-body {
+    p{
+        color: #4facfe;
+    }
+    li {
+        i{
+            color: #4facfe;
+        }
+    }
+  
+}
+.standard .card-body {
+  p{
+      color: #4a00e0;
+  }
+  li {
+        i{
+            color: #4a00e0;
+        }
+    }
+}
+.premium .card-body {
+  p{
+      color: #ee0979;
+  }
+  li {
+        i{
+            color: #ee0979;
+        }
+    }
+}

@@ -67,7 +67,7 @@
 
   @media (max-width: 575.98px) {
       .product-grid  {
-            grid-template-columns: 1fr ; 
+            grid-template-columns: 400px ; 
             gap: 30px; 
             .product-card {
                 max-width: 400px;
@@ -78,7 +78,7 @@
 
     @media (min-width: 576px) and (max-width: 767.98px) {
     .product-grid  {
-            grid-template-columns: 1fr ; 
+            grid-template-columns: 400px ; 
             gap: 30px; 
             .product-card {
                 max-width: 400px;
@@ -89,7 +89,7 @@
 
     @media (min-width: 768px) and (max-width: 991.98px) {
      .product-grid  {
-            grid-template-columns: 1fr 1fr; 
+            grid-template-columns: 400px 400px; 
             gap: 30px; 
         }
 
@@ -100,7 +100,7 @@
    
 
         .product-grid  {
-            grid-template-columns: 1fr 1fr; 
+            grid-template-columns: 400px 400px; 
             gap: 30px; 
         }
 
