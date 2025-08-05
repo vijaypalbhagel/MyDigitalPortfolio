@@ -14,7 +14,7 @@ import { ScrollSpyDirective } from './core/scroll-spy/scroll-spy.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent,HomeComponent,AboutComponent,ServicesComponent,ResumeComponent,SkillsComponent,PortfolioComponent,FeedbackComponent,OurBlogComponent,ContactComponent,ScrollSpyDirective],
+  imports: [HeaderComponent,HomeComponent,AboutComponent,ServicesComponent,ResumeComponent,SkillsComponent,PortfolioComponent,OurBlogComponent,ContactComponent,ScrollSpyDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

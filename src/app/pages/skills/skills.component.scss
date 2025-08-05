@@ -138,8 +138,8 @@
     }
 
     .design-skill-tags {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
       padding: 10px 35px;
 
@@ -148,42 +148,70 @@
         border-radius: 30px;
         font-weight: 500;
         font-size: 16px;
-        display: flex;
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: auto;
         align-items: center;
+        justify-content: center;
         gap: 10px;
         position: relative;
         color: white;
         border: 2px solid;
-
-        span {
+        h4 {
+          margin: 0;
+          margin-bottom: 5px;
           font-size: 20px;
           font-weight: 600;
+          text-align: center;
+        }
+
+        h4 {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .icon{
+          font-size: 2.5rem;
         }
 
         &.figma {
           border-color: #21c198;
           background: rgba(33, 193, 152, 0.1);
+          i {
+            color: #21c198;
+          }
         }
 
         &.photoshop {
           border-color: #0078f0;
           background: rgba(0, 120, 240, 0.1);
+          i {
+            color: #0078f0;
+          }
         }
 
         &.xd {
           border-color: #ec3dfc;
           background: rgba(236, 61, 252, 0.1);
+          i{
+            color: #ec3dfc;
+          }
         }
 
         &.sketch {
           border-color: #fcd000;
           background: rgba(252, 208, 0, 0.1);
-          color: #fcd000;
+          i{
+            color: #fcd000;
+          }
+          
         }
 
         &.invision {
           border-color: #ff3263;
           background: rgba(255, 50, 99, 0.1);
+          i{
+            color: #ff3263;
+          }
         }
       }
     }
