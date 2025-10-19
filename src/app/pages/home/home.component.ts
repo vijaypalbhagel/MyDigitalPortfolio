@@ -27,7 +27,7 @@ export class HomeComponent {
       this.className=''
        this.className='typing-animation2'
      }
-    }, 3000); 
+    }, 3500); 
   }
 
    clearInterval(): void {
